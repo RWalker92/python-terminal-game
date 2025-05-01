@@ -1,5 +1,5 @@
 import random
-cards = {"A": [1, 11], "2": [2], "3": [3], "4": [4], "5": [5], "6": [6], "7": [7], "8": [8], "9": [9], "10": [10], "J": [10], "Q": [10], "K": [10]}
+cards = {"A": [1], "2": [2], "3": [3], "4": [4], "5": [5], "6": [6], "7": [7], "8": [8], "9": [9], "10": [10], "J": [10], "Q": [10], "K": [10]}
 
 player_hand = []
 dealer_hand = []
@@ -14,5 +14,12 @@ print("Dealing cards...")
 
 # Deal two cards to the player and one card to the dealer
 
+for _ in range(2):
+    card = random.choice(list(cards.keys()))
+    player_hand.append(card)
+    player_score += cards[card][0]
 
+    card = random.choice(list(cards.keys()))
+    dealer_hand.append(card)
+    dealer_score += cards[card][0]
 
