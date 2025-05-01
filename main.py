@@ -23,3 +23,8 @@ for _ in range(2):
     dealer_hand.append(card)
     dealer_score += cards[card][0]
 
+def deal_card():
+    global player_score
+    card = random.choice(list(cards.keys()))
+    player_hand.append(card)
+    player_score += cards[card][0]
