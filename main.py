@@ -28,3 +28,15 @@ def deal_card():
     card = random.choice(list(cards.keys()))
     player_hand.append(card)
     player_score += cards[card][0]
+
+while player_score < 21:
+    print(f"{player_name} you are dealt {player_hand} for a score of {player_score}")
+    deal_again = input("Would you like another card? y/n ").lower()
+    if deal_again == "y":
+        deal_card()
+        print(f"You were dealt a {player_hand[-1]}")
+        if player_score > 21:
+            print("You bust!")
+    else:
+        print(f"You end with a total score of {player_score}")
+        break
