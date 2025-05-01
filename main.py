@@ -40,3 +40,15 @@ while player_score < 21:
     else:
         print(f"You end with a total score of {player_score}")
         break
+
+print("Lets see what the dealer scores.....")
+print(f"The dealer has drawn the cards {dealer_hand} for a score of {dealer_score}")
+
+if player_score > 21:
+    print("You bust, dealer wins!")
+elif dealer_score > player_score:
+    print("Dealer Wins!")
+elif player_score > dealer_score:
+    print(f"{player_name} Wins!")
+else:
+    print("No winner!")
